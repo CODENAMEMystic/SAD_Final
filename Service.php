@@ -5,7 +5,7 @@ if (mysqli_connect_errno())
 }
  
 // This SQL statement selects ALL from the table 'game_session'
-$sql = "SELECT * FROM game_sesson";
+$sql = "SELECT * FROM game_session";
  
 // Check if there are results
 if ($result = mysqli_query($con, $sql))
