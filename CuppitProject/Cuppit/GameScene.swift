@@ -15,7 +15,7 @@ struct PhysicsCatagory {
     static let scoreCategory: UInt32 = 0x1 << 2
     
 }
-
+//create score and highscore variables
     var score = 0
     var highScore = 0
 
@@ -47,7 +47,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
      
-        
+        //stuff to setup scene
         SceneSetup()
         Cup()
         Scores()
@@ -79,7 +79,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
    
     func Cup(){
-        
+        //create the cup
         let cupTexture = SKTexture(imageNamed: "CuppitC")
         cup = SKSpriteNode(texture: cupTexture)
         cup.size = CGSize(width: 180, height: 180)
@@ -104,7 +104,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func Scores(){
-        
+        //save highscore
         let HighscoreDefault = UserDefaults.standard
         if HighscoreDefault.value(forKey: "Highscore") != nil {
             
