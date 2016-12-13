@@ -8,7 +8,7 @@
 
 import UIKit
 import SpriteKit
-
+// stars
 class StartScene: SKScene {
 
     var logo: SKSpriteNode!
@@ -30,7 +30,7 @@ class StartScene: SKScene {
         createStars()
         
     }
-    
+    //create stars
     func createStars() {
         let starBackground = SKEmitterNode(fileNamed: "StarBackground")!
         starBackground.particlePositionRange.dx = self.frame.size.width
