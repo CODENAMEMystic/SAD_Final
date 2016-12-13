@@ -15,10 +15,10 @@ class DbOperation
     }
  
     //Function to create a new user
-    public function createTeam($name, $memberCount)
+    public function createTeam($session_id, $score)
     {
-        $stmt = $this->conn->prepare("INSERT INTO team(name, member) values(?, ?)");
-        $stmt->bind_param("si", $name, $memberCount);
+        $stmt = $this->conn->prepare("INSERT INTO game_session(session_id, score) values(?, ?)");
+        $stmt->bind_param("si", $session_id, $score);
         $result = $stmt->execute();
         $stmt->close();
         if ($result) {
