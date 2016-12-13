@@ -27,7 +27,7 @@ class MenuScene: SKScene, GKGameCenterControllerDelegate {
         
     
     }
-    
+    //setup background
     func setupBackground(){
         backgroundColor = UIColor.black
         self.anchorPoint = CGPoint(x: 0, y: 0)
@@ -37,7 +37,7 @@ class MenuScene: SKScene, GKGameCenterControllerDelegate {
     }
     
 
-    
+    //create stars
     func createStars() {
         let starBackground = SKEmitterNode(fileNamed: "StarBackground")!
         starBackground.particlePositionRange.dx = self.frame.size.width
@@ -47,7 +47,7 @@ class MenuScene: SKScene, GKGameCenterControllerDelegate {
         self.addChild(starBackground)
     }
     
-    
+    //create buttons
     func CreateBtns() {
         
         let logoTexture = SKTexture(imageNamed: "CuppitC")
@@ -107,7 +107,7 @@ class MenuScene: SKScene, GKGameCenterControllerDelegate {
 
         
     }
-    
+    //saves highscore
     func saveHighscore(_ number : Int){
         
         if GKLocalPlayer.localPlayer().isAuthenticated {
@@ -124,7 +124,7 @@ class MenuScene: SKScene, GKGameCenterControllerDelegate {
         
         
     }
-    
+    //shows leaderboard
     func showLeaderBoard(){
         let viewController = self.view?.window?.rootViewController
         let gcvc = GKGameCenterViewController()
