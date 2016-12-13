@@ -41,7 +41,7 @@ class GameOverScene: SKScene {
         //createStars()
         
     }
-    
+    //create stars
     func createStars() {
         let starBackground = SKEmitterNode(fileNamed: "StarBackground")!
         starBackground.particlePositionRange.dx = self.frame.size.width
@@ -61,7 +61,7 @@ class GameOverScene: SKScene {
         self.addChild(homeBtn)
     }
 
-    
+    //label setup
     func setupLabels(){
         
         let scoreBLKTexture = SKTexture(imageNamed: "BlankBtn")
